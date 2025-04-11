@@ -1,6 +1,5 @@
 import java.util.Scanner;
  
-// Base class
 class Vehicle {
     private String brand;
     private int speed;
@@ -31,7 +30,6 @@ class Vehicle {
     }
 }
  
-// Subclass Car
 class Car extends Vehicle {
     private int numDoors;
  
@@ -47,7 +45,6 @@ class Car extends Vehicle {
     }
 }
  
-// Subclass Motorcycle
 class Motorcycle extends Vehicle {
     private boolean hasSidecar;
  
@@ -63,12 +60,10 @@ class Motorcycle extends Vehicle {
     }
 }
  
-// Test class with user input
 public class testVehicle {
     public static void main(String[] args) {
     Scanner scanner = new Scanner(System.in);
  
-        // Input for Car
         System.out.println("Enter Car Details:");
         System.out.print("Brand: ");
         String carBrand = scanner.nextLine();
@@ -84,7 +79,6 @@ public class testVehicle {
         int numDoors = scanner.nextInt();
         scanner.nextLine();
  
-        // Input for Motorcycle
         System.out.println("\nEnter Motorcycle Details:");
         System.out.print("Brand: ");
         String motoBrand = scanner.nextLine();
@@ -98,11 +92,9 @@ public class testVehicle {
         System.out.print("Has Sidecar? (true/false): ");
         boolean hasSidecar = scanner.nextBoolean();
  
-        // Creating objects
         Vehicle Car = new Car(carBrand, carSpeed, carFuel, numDoors);
         Vehicle motorcycle = new Motorcycle(motoBrand, motoSpeed, motoFuel, hasSidecar);
  
-        // Display details
         System.out.println("\nCar Details:");
         Car.displayInfo();
  
